@@ -5,9 +5,9 @@
 ### **1. Entwicklung**
 ✅ 1.1 Grundstruktur mit Astro erstellen
 ✅ 1.2 Startseite umsetzen 
-🔲 1.3 "Über uns"-Seite umsetzen 
-🔲 1.4 Services-Seite umsetzen 
-🔲 1.5 Kontaktseite mit Formular umsetzen 
+✅ 1.3 "Über uns"-Seite umsetzen 
+✅ 1.4 Services-Seite umsetzen 
+✅ 1.5 Kontaktseite mit Formular umsetzen 
 🔲 1.6 Impressum & Datenschutz umsetzen 
 
 ### **2. Optimierung & Testing**

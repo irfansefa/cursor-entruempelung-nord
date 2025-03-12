@@ -1,0 +1,72 @@
+---
+const faqs = [
+  {
+    question: "Wie schnell kann eine Entrümpelung erfolgen?",
+    answer: "Je nach Umfang können wir innerhalb von 24 bis 48 Stunden einen Termin anbieten."
+  },
+  {
+    question: "Was passiert mit verwertbaren Gegenständen?",
+    answer: "Wir setzen auf Recycling, Spenden und Wiederverwendung, um möglichst nachhaltig zu arbeiten."
+  },
+  {
+    question: "Muss ich während der Entrümpelung anwesend sein?",
+    answer: "Nein, auf Wunsch können wir die Entrümpelung auch ohne Ihre Anwesenheit durchführen."
+  },
+  {
+    question: "Wie berechnet sich der Preis?",
+    answer: "Die Kosten richten sich nach Menge, Aufwand und Entsorgungsgebühren – wir bieten Ihnen stets ein Festpreisangebot."
+  },
+  {
+    question: "In welchen Regionen sind Sie tätig?",
+    answer: "Wir sind in ganz Norddeutschland tätig, darunter Hamburg, Bremen, Schleswig-Holstein, Niedersachsen und Mecklenburg-Vorpommern."
+  },
+  {
+    question: "Übernehmen Sie auch die Reinigung nach der Entrümpelung?",
+    answer: "Ja, wir übergeben die Räumlichkeiten besenrein. Auf Wunsch bieten wir auch eine gründlichere Reinigung an."
+  }
+];
+---
+
+<section class="section bg-white">
+  <div class="container">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Häufig gestellte Fragen</h2>
+      <p class="text-lg text-gray-600">
+        Hier finden Sie Antworten auf die häufigsten Fragen zu unseren Entrümpelungsdienstleistungen
+      </p>
+    </div>
+    
+    <div class="max-w-3xl mx-auto divide-y divide-gray-200">
+      {faqs.map((faq, index) => (
+        <div class="py-5">
+          <details class="group">
+            <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+              <span class="text-lg font-semibold">{faq.question}</span>
+              <span class="transition group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+              </span>
+            </summary>
+            <p class="text-gray-600 mt-3 group-open:animate-fadeIn">
+              {faq.answer}
+            </p>
+          </details>
+        </div>
+      ))}
+    </div>
+    
+    <div class="mt-12 text-center">
+      <p class="text-gray-600 mb-4">Haben Sie weitere Fragen?</p>
+      <a href="/kontakt" class="btn btn-primary">
+        Kontaktieren Sie uns
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+</style> 

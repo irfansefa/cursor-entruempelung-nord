@@ -1,0 +1,50 @@
+---
+const regions = [
+  {
+    name: "Hamburg",
+    description: "Haushaltsauflösung und Entrümpelung in allen Stadtteilen."
+  },
+  {
+    name: "Bremen",
+    description: "Fachgerechte Entrümpelungen für Privat und Gewerbe."
+  },
+  {
+    name: "Schleswig-Holstein",
+    description: "In Kiel, Lübeck, Flensburg und Umgebung."
+  },
+  {
+    name: "Niedersachsen",
+    description: "Hannover, Braunschweig, Osnabrück, Oldenburg u.v.m."
+  },
+  {
+    name: "Mecklenburg-Vorpommern",
+    description: "Rostock, Schwerin, Neubrandenburg und mehr."
+  }
+];
+---
+
+<section class="section bg-gray-50">
+  <div class="container">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Unser Einzugsgebiet</h2>
+      <p class="text-lg text-gray-600">
+        Entrümpelung in Norddeutschland – Wir sind in folgenden Regionen für Sie im Einsatz
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {regions.map(region => (
+        <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 border-blue-500">
+          <h3 class="text-xl font-semibold mb-2">{region.name}</h3>
+          <p class="text-gray-600">{region.description}</p>
+        </div>
+      ))}
+    </div>
+    
+    <div class="mt-8 text-center">
+      <p class="text-gray-600 italic">
+        Falls Ihre Stadt nicht aufgelistet ist, kontaktieren Sie uns – wir sind flexibel und finden eine Lösung für Sie!
+      </p>
+    </div>
+  </div>
+</section> 

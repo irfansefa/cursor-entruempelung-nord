@@ -1,0 +1,63 @@
+---
+const steps = [
+  {
+    number: 1,
+    title: "Kontakt & Terminvereinbarung",
+    description: "Rufen Sie uns an oder nutzen Sie unser Online-Formular zur Terminvereinbarung."
+  },
+  {
+    number: 2,
+    title: "Kostenlose Besichtigung",
+    description: "Wir bewerten die Räumlichkeiten vor Ort und erstellen Ihnen ein unverbindliches Angebot."
+  },
+  {
+    number: 3,
+    title: "Festpreisangebot",
+    description: "Sie erhalten einen transparenten Kostenvoranschlag ohne versteckte Gebühren."
+  },
+  {
+    number: 4,
+    title: "Entrümpelung & Entsorgung",
+    description: "Unser Team räumt schnell, sauber und umweltfreundlich."
+  },
+  {
+    number: 5,
+    title: "Besenreine Übergabe",
+    description: "Nach Abschluss der Arbeiten übergeben wir Ihnen die Räume in perfektem Zustand."
+  }
+];
+---
+
+<section class="section bg-blue-50">
+  <div class="container">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Unser Entrümpelungsprozess</h2>
+      <p class="text-lg text-gray-600">
+        So funktioniert's – einfach, transparent und effizient
+      </p>
+    </div>
+    
+    <div class="relative">
+      <!-- Process steps -->
+      <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-blue-200 -translate-y-1/2 z-0"></div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        {steps.map((step, index) => (
+          <div class="relative z-10 flex flex-col items-center text-center">
+            <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+              {step.number}
+            </div>
+            <h3 class="text-xl font-semibold mb-2">{step.title}</h3>
+            <p class="text-gray-600">{step.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+    
+    <div class="mt-12 text-center">
+      <a href="/kontakt" class="btn btn-primary">
+        Jetzt Termin vereinbaren
+      </a>
+    </div>
+  </div>
+</section> 

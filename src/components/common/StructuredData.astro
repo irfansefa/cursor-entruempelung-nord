@@ -1,0 +1,50 @@
+---
+// Component to add structured data (JSON-LD) to pages
+// This helps search engines better understand the content of your site
+
+interface Props {
+  type: 'LocalBusiness' | 'Service' | 'WebSite' | 'BreadcrumbList';
+  data: any;
+}
+
+const { type, data } = Astro.props;
+
+// Generate the appropriate structured data based on the type
+let structuredData;
+
+switch (type) {
+  case 'LocalBusiness':
+    structuredData = {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      ...data
+    };
+    break;
+  case 'Service':
+    structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      ...data
+    };
+    break;
+  case 'WebSite':
+    structuredData = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      ...data
+    };
+    break;
+  case 'BreadcrumbList':
+    structuredData = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      ...data
+    };
+    break;
+  default:
+    structuredData = {};
+}
+---
+
+<!-- Render the structured data as script with type application/ld+json -->
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script> 

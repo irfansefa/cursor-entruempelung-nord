@@ -6,9 +6,47 @@ import ContactForm from '../components/contact/ContactForm.astro';
 import ContactAreas from '../components/contact/ContactAreas.astro';
 import ContactFAQ from '../components/contact/ContactFAQ.astro';
 import CTA from '../components/common/CTA.astro';
+import StructuredData from '../components/common/StructuredData.astro';
+import { siteInfo } from '../data/siteInfo.js';
+import { generateBreadcrumbSchema, generateLocalBusinessSchema } from '../utils/structuredDataUtils.js';
+import { createBreadcrumbs } from '../utils/urlUtils.js';
+
+const title = "Kontakt - Entrümpelung Nord in Kiel und Norddeutschland";
+const description = "Kontaktieren Sie uns für eine kostenlose Beratung und ein unverbindliches Angebot. Schnelle Terminvereinbarung für Ihre Entrümpelung oder Haushaltsauflösung in ganz Norddeutschland.";
+const ogImage = "/images/seo/contact-og-image.jpg";
+const canonicalUrl = "/kontakt/";
+
+// Generate breadcrumb data using URL utilities
+const breadcrumbs = createBreadcrumbs([
+  { name: "Kontakt", path: "/kontakt/" }
+]);
+
+// Generate structured data
+const breadcrumbData = generateBreadcrumbSchema(breadcrumbs);
+
+// Contact page specific business data with contactPoint
+const contactBusinessData = generateLocalBusinessSchema({
+  url: `${siteInfo.url}/kontakt/`,
+  description: "Professioneller Entrümpelungsservice in Kiel und Norddeutschland",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: siteInfo.contact.phone,
+    contactType: "customer service",
+    availableLanguage: "German",
+    email: siteInfo.contact.email
+  }
+});
 ---
 
-<Layout title="Kontakt - Entrümpelung Nord in Kiel und Norddeutschland">
+<Layout 
+  title={title}
+  description={description}
+  ogImage={ogImage}
+  canonicalUrl={canonicalUrl}
+>
+    <StructuredData type="BreadcrumbList" data={breadcrumbData} />
+    <StructuredData type="LocalBusiness" data={contactBusinessData} />
+    
     <ContactHero />
     <ContactInfo />
     <ContactForm />

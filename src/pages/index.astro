@@ -8,9 +8,31 @@ import Regions from '../components/homepage/Regions.astro';
 import Testimonials from '../components/homepage/Testimonials.astro';
 import FAQ from '../components/homepage/FAQ.astro';
 import CTA from '../components/common/CTA.astro';
+import StructuredData from '../components/common/StructuredData.astro';
+import { generateLocalBusinessSchema, generateWebsiteSchema, generateServiceSchema } from '../utils/structuredDataUtils.js';
+
+const title = "Entrümpelung & Haushaltsauflösung in Kiel und Norddeutschland";
+const description = "Professioneller Entrümpelungsservice in Kiel und ganz Norddeutschland. Faire Preise, kompetente Beratung und umweltbewusste Entsorgung. Jetzt kostenloses Angebot anfordern!";
+const ogImage = "/images/seo/home-og-image.jpg";
+const canonicalUrl = "/"; // Root URL is canonical for the homepage
+
+// Generate structured data using our utility functions
+const businessSchema = generateLocalBusinessSchema();
+const siteSchema = generateWebsiteSchema();
+const serviceSchema = generateServiceSchema();
+
 ---
 
-<Layout title="Startseite">
+<Layout 
+  title={title}
+  description={description}
+  ogImage={ogImage}
+  canonicalUrl={canonicalUrl}
+>
+	<StructuredData type="LocalBusiness" data={businessSchema} />
+	<StructuredData type="WebSite" data={siteSchema} />
+	<StructuredData type="Service" data={serviceSchema} />
+	
 	<Hero />
 	<Services />
 	<Features />

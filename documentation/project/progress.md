@@ -11,7 +11,7 @@
 ✅ 1.6 Impressum & Datenschutz umsetzen 
 
 ### **2. Optimierung & Testing**
-🔲 2.1 SEO-Optimierung durchführen 
+✅ 2.1 SEO-Optimierung durchführen 
 🔲 2.2 Performance-Optimierung für PageSpeed 
 🔲 2.3 Responsiveness auf Mobilgeräten testen 
 🔲 2.4 Formular-Funktionalität testen 

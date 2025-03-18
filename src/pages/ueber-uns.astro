@@ -6,9 +6,52 @@ import AboutValues from '../components/aboutus/AboutValues.astro';
 import AboutTeam from '../components/aboutus/AboutTeam.astro';
 import AboutLocation from '../components/aboutus/AboutLocation.astro';
 import CTA from '../components/common/CTA.astro';
+import StructuredData from '../components/common/StructuredData.astro';
+import { siteInfo } from '../data/siteInfo.js';
+import { generateBreadcrumbSchema, generateLocalBusinessSchema } from '../utils/structuredDataUtils.js';
+import { createBreadcrumbs } from '../utils/urlUtils.js';
+
+const title = "Über Entrümpelung Nord - Ihr Team für Haushaltsauflösungen";
+const description = "Lernen Sie unser erfahrenes Team kennen. Seit über 15 Jahren Ihr vertrauensvoller Partner für Entrümpelung und Haushaltsauflösung in Schleswig-Holstein und Norddeutschland.";
+const ogImage = "/images/seo/about-og-image.jpg";
+const canonicalUrl = "/ueber-uns/";
+
+// Generate breadcrumb data using URL utilities
+const breadcrumbs = createBreadcrumbs([
+  { name: "Über uns", path: "/ueber-uns/" }
+]);
+
+// Generate structured data
+const breadcrumbData = generateBreadcrumbSchema(breadcrumbs);
+
+// About page specific business data with additional company information
+const companyData = generateLocalBusinessSchema({
+  url: `${siteInfo.url}/ueber-uns/`,
+  description: `Seit über ${new Date().getFullYear() - parseInt(siteInfo.business.foundingYear)} Jahren Ihr zuverlässiger Partner für professionelle Entrümpelung und Haushaltsauflösung in Kiel und ganz Norddeutschland.`,
+  foundingDate: siteInfo.business.foundingYear,
+  founders: [
+    {
+      "@type": "Person",
+      name: "Max Mustermann"
+    }
+  ],
+  numberOfEmployees: {
+    "@type": "QuantitativeValue",
+    value: siteInfo.business.numEmployees
+  },
+  slogan: siteInfo.slogan
+});
 ---
 
-<Layout title="Über uns">
+<Layout 
+  title={title}
+  description={description}
+  ogImage={ogImage}
+  canonicalUrl={canonicalUrl}
+>
+  <StructuredData type="BreadcrumbList" data={breadcrumbData} />
+  <StructuredData type="LocalBusiness" data={companyData} />
+  
   <AboutHero />
   <AboutIntro />
   <AboutValues />

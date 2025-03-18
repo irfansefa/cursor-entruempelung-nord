@@ -1,9 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Content as PrivacyPolicy } from '../../documentation/content/datenschutz.md';
+import StructuredData from '../components/common/StructuredData.astro';
+import { generateBreadcrumbSchema } from '../utils/structuredDataUtils.js';
+import { createBreadcrumbs } from '../utils/urlUtils.js';
+
+const title = "Datenschutz | Entrümpelung Nord";
+const description = "Datenschutzerklärung von Entrümpelung Nord. Erfahren Sie, wie wir Ihre personenbezogenen Daten schützen und verarbeiten gemäß der aktuellen Datenschutzrichtlinien.";
+const ogImage = "/images/seo/datenschutz-og-image.jpg";
+const canonicalUrl = "/datenschutz/";
+
+// Generate breadcrumb data using URL utilities
+const breadcrumbs = createBreadcrumbs([
+  { name: "Datenschutz", path: "/datenschutz/" }
+]);
+
+// Generate structured data
+const breadcrumbData = generateBreadcrumbSchema(breadcrumbs);
 ---
 
-<Layout title="Datenschutz | Entrümpelung Nord - Professionelle Entrümpelung in Kiel und Norddeutschland">
+<Layout 
+  title={title}
+  description={description}
+  ogImage={ogImage}
+  canonicalUrl={canonicalUrl}
+>
+  <StructuredData type="BreadcrumbList" data={breadcrumbData} />
+  
   <main>
     <section class="py-8 bg-gradient-to-b from-blue-50 to-white">
       <div class="container">

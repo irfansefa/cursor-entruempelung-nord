@@ -1,0 +1,61 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Set the base directory
+RewriteBase /
+
+# Remove trailing slashes (except for root URL)
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^(.+)/$ $1 [R=301,L]
+
+# Force https
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.entrumpelungnord\.de [NC]
+RewriteRule (.*) https://entrumpelungnord.de/$1 [R=301,L]
+
+# Redirect old URLs to new structure
+RedirectMatch 301 ^/about/?$ /ueber-uns
+RedirectMatch 301 ^/leistungen/?$ /services
+RedirectMatch 301 ^/service/?$ /services
+RedirectMatch 301 ^/kontakt-form/?$ /kontakt
+RedirectMatch 301 ^/datenschutz-.+$ /datenschutz
+RedirectMatch 301 ^/imprint/?$ /impressum
+RedirectMatch 301 ^/privacy/?$ /datenschutz
+
+# Prevent directory listings
+Options -Indexes
+
+# Set default character set
+AddDefaultCharset UTF-8
+
+# Enable browser caching for static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Images
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  
+  # CSS, JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  
+  # Fonts
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Compress text files
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml
+</IfModule> 

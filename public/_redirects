@@ -1,0 +1,17 @@
+# Redirect rules for SEO optimization
+# Ensures clean URLs and prevents duplicate content
+
+# Remove trailing slashes (except for root)
+/*/              /:splat          301!
+
+# Enforce lowercase URLs
+/* /lowercase-uri-encoder/:uri 301
+
+# Redirect old URLs to new structure (examples - customize as needed)
+/about           /ueber-uns       301
+/leistungen      /services        301
+/service         /services        301
+/kontakt-form    /kontakt         301
+/datenschutz-*   /datenschutz     301
+/imprint         /impressum       301
+/privacy         /datenschutz     301 

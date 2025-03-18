@@ -35,7 +35,47 @@ module.exports = {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         heading: ['Inter', 'system-ui', 'sans-serif'],
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none',
+            color: 'inherit',
+            a: {
+              color: '#0284c7',
+              textDecoration: 'none',
+              fontWeight: '500',
+              '&:hover': {
+                textDecoration: 'underline',
+              },
+            },
+            h1: {
+              color: '#075985',
+              fontWeight: '700',
+            },
+            h2: {
+              color: '#0369a1',
+              fontWeight: '600',
+            },
+            h3: {
+              color: '#0284c7',
+              fontWeight: '600',
+            },
+            strong: {
+              color: '#1e293b',
+              fontWeight: '700',
+            },
+            li: {
+              margin: '0.5em 0',
+            },
+            'li::marker': {
+              color: '#0284c7',
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }; 

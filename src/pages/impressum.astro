@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Content as Imprint } from '../../documentation/content/impressum.md';
+---
+
+<Layout title="Impressum - Entrümpelung Nord">
+  <main>
+    <section class="py-8 bg-gradient-to-b from-blue-50 to-white">
+      <div class="container">
+        <div class="max-w-4xl mx-auto">
+          
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-8 md:p-10 prose prose-lg">
+              <Imprint />
+            </div>
+          </div>
+          
+          <div class="text-center mt-8">
+            <a href="/" class="inline-flex items-center px-6 py-3 text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              Zurück zur Startseite
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout> 

@@ -43,6 +43,20 @@ Wir sind in ganz Norddeutschland für Sie im Einsatz, darunter:
 
 Falls Ihre Stadt nicht aufgelistet ist, kontaktieren Sie uns – wir sind flexibel und finden eine Lösung für Sie!
 
+## Kundenmeinungen – Das sagen unsere Kunden
+
+⭐⭐⭐⭐⭐ Anna M.
+
+"Schnelle und professionelle Entrümpelung! Alles wurde sauber hinterlassen und das Team war super freundlich. Klare Empfehlung!"
+
+⭐⭐⭐⭐⭐ Tobias S.
+
+"Sehr zuverlässig und fairer Preis. Die Entrümpelung lief reibungslos, ich bin absolut zufrieden!"
+
+⭐⭐⭐⭐⭐ Katrin W.
+
+"Ich war beeindruckt von der Effizienz und Sorgfalt. Alles wurde wie besprochen erledigt. Vielen Dank!"
+
 ## Häufig gestellte Fragen (FAQ)
 
 **Wie schnell kann eine Entrümpelung erfolgen?**

@@ -16,7 +16,7 @@ export const siteInfo = {
   // Contact information
   contact: {
     phone: "+4943112846305",
-    email: "info@entruempelungnord.de",
+    email: "info@entrumpelungnord.de",
     address: {
       street: "Kaiserstraße 7",
       city: "Kiel",

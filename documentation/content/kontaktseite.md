@@ -11,7 +11,7 @@ Kaiserstraße 7
 24143 Kiel
 
 ☎ **Telefon:** +49 431 128 46 305  
-📧 **E-Mail:** info@entruempelungnord.de  
+📧 **E-Mail:** info@entrumpelungnord.de  
 
 **Geschäftszeiten:**  
 Montag - Freitag: 08:00 - 18:00 Uhr  

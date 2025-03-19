@@ -4,10 +4,15 @@ RewriteEngine On
 # Set the base directory
 RewriteBase /
 
-# Remove trailing slashes (except for root URL)
-RewriteCond %{REQUEST_URI} !^/$
-RewriteCond %{REQUEST_URI} (.+)/$
-RewriteRule ^(.+)/$ $1 [R=301,L]
+# Handle directories properly for static site - THIS IS THE KEY FIX
+# If the file exists, serve it directly
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# If the directory exists, serve its index.html file without redirecting
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.*)$ $1/index.html [L]
 
 # Force https
 RewriteCond %{HTTPS} off
@@ -16,15 +21,6 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # Redirect www to non-www
 RewriteCond %{HTTP_HOST} ^www\.entrumpelungnord\.de [NC]
 RewriteRule (.*) https://entrumpelungnord.de/$1 [R=301,L]
-
-# Redirect old URLs to new structure
-RedirectMatch 301 ^/about/?$ /ueber-uns
-RedirectMatch 301 ^/leistungen/?$ /services
-RedirectMatch 301 ^/service/?$ /services
-RedirectMatch 301 ^/kontakt-form/?$ /kontakt
-RedirectMatch 301 ^/datenschutz-.+$ /datenschutz
-RedirectMatch 301 ^/imprint/?$ /impressum
-RedirectMatch 301 ^/privacy/?$ /datenschutz
 
 # Prevent directory listings
 Options -Indexes

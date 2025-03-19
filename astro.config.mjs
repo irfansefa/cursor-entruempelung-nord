@@ -4,14 +4,23 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
+  integrations: [tailwind({
+    // Inline all Tailwind styles to avoid render-blocking
+    applyBaseStyles: false
+  })],
   build: {
-    inlineStylesheets: 'auto'
+    inlineStylesheets: "always"
   },
   vite: {
     build: {
       cssMinify: true,
-      cssCodeSplit: true
+      cssCodeSplit: false, // Prevent code splitting for CSS
+    },
+    css: {
+      // Ensure styles are inlined in the build
+      modules: {
+        generateScopedName: '[hash:base64:8]'
+      }
     }
   }
 });

@@ -7,13 +7,11 @@ Sie benötigen eine professionelle **Entrümpelung, Haushaltsauflösung oder Woh
 ## Unsere Kontaktdaten
 
 **Entrümpelung Nord**  
-Musterstraße 123  
-24103 Kiel
+Kaiserstraße 7 
+24143 Kiel
 
-☎ **Telefon:** [Ihre Telefonnummer]  
-📱 **Mobil:** [Ihre Mobilnummer]  
-📧 **E-Mail:** [Ihre E-Mail-Adresse]  
-🌐 **Website:** [Ihre Website-Adresse]
+☎ **Telefon:** +49 431 128 46 305  
+📧 **E-Mail:** info@entruempelungnord.de  
 
 **Geschäftszeiten:**  
 Montag - Freitag: 08:00 - 18:00 Uhr  
@@ -65,18 +63,6 @@ Wir sind Ihr lokaler Ansprechpartner für professionelle Entrümpelungen in ganz
 - **Wismar, Stralsund, Greifswald**
 
 Unsicher, ob wir auch in Ihrer Region tätig sind? Kontaktieren Sie uns – wir finden eine Lösung!
-
-## So erreichen Sie uns – Anfahrt zu unserem Standort in Kiel
-
-Unser Büro in Kiel ist zentral gelegen und gut erreichbar:
-
-### Mit dem Auto:
-- Von der A215: Ausfahrt Kiel-Mitte nehmen, Richtung Zentrum fahren
-- Kostenlose Parkplätze stehen vor unserem Gebäude zur Verfügung
-
-### Mit öffentlichen Verkehrsmitteln:
-- Bus: Linien [Buslinien] bis Haltestelle [Haltestelle]
-- Bahn: Vom Hauptbahnhof Kiel ca. 10 Minuten Fußweg
 
 ## Häufig gestellte Fragen zum Kontakt
 

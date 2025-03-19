@@ -143,8 +143,6 @@ Sie benötigen eine professionelle Entrümpelung in Norddeutschland? Kontaktiere
 **Entrümpelung Nord – Ihr zuverlässiger Partner für Entrümpelungen aller Art**
 
 ☎ **Telefon:** [Ihre Telefonnummer]  
-📱 **Mobil:** [Ihre Mobilnummer]  
-📧 **E-Mail:** [Ihre E-Mail-Adresse]  
-🌐 **Website:** [Ihre Website-Adresse]
+📧 **E-Mail:** [Ihre E-Mail-Adresse]
 
 **Wir sind für Sie da – schnell, zuverlässig und zu fairen Preisen!** 

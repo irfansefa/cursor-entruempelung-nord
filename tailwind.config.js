@@ -42,10 +42,8 @@ module.exports = {
             color: 'inherit',
             a: {
               color: '#0284c7',
-              textDecoration: 'none',
-              fontWeight: '500',
               '&:hover': {
-                textDecoration: 'underline',
+                color: '#0369a1',
               },
             },
             h1: {
@@ -76,6 +74,8 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
+    require('@tailwindcss/typography')({
+      className: 'prose',
+    }),
   ],
 }; 

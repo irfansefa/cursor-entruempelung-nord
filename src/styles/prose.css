@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+
+/* Only include prose styles */
+@layer components {
+  .prose {
+    @apply prose-lg prose-gray max-w-none;
+  }
+} 

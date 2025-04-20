@@ -1,4 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+import testimonialPerson1 from '../../images/testimonials/person-1.jpg';
+import testimonialPerson2 from '../../images/testimonials/person-2.jpg';
+import testimonialPerson3 from '../../images/testimonials/person-3.jpg';
 // Testimonials component for the homepage
 ---
 
@@ -46,11 +50,10 @@
           <div class="mt-auto p-6 pt-0">
             <div class="flex items-center">
               <div class="w-12 h-12 bg-blue-100 rounded-full overflow-hidden mr-4 flex items-center justify-center">
-                <img 
-                  src="/images/testimonials/person-1.jpg" 
+                <Image 
+                  src={testimonialPerson1}
                   alt="Anna M. aus Kiel - Zufriedene Kundin nach Haushaltsauflösung" 
                   class="w-full h-full object-cover"
-                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                 />
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
@@ -103,11 +106,10 @@
           <div class="mt-auto p-6 pt-0">
             <div class="flex items-center">
               <div class="w-12 h-12 bg-blue-100 rounded-full overflow-hidden mr-4 flex items-center justify-center">
-                <img 
-                  src="/images/testimonials/person-2.jpg" 
+                <Image 
+                  src={testimonialPerson2}
                   alt="Tobias S. aus Hamburg - 5-Sterne Bewertung für Entrümpelung" 
                   class="w-full h-full object-cover"
-                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                 />
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
@@ -160,11 +162,10 @@
           <div class="mt-auto p-6 pt-0">
             <div class="flex items-center">
               <div class="w-12 h-12 bg-blue-100 rounded-full overflow-hidden mr-4 flex items-center justify-center">
-                <img 
-                  src="/images/testimonials/person-3.jpg" 
+                <Image 
+                  src={testimonialPerson3}
                   alt="Katrin W. aus Lübeck - Positive Erfahrung mit unserer Entrümpelungsdienstleistung" 
                   class="w-full h-full object-cover"
-                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                 />
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 

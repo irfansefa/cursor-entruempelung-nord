@@ -1,3 +1,8 @@
+---
+import { Image } from 'astro:assets';
+import aboutTeamImage from '../../images/aboutus/team.jpg';
+---
+
 <section class="py-16 bg-white">
   <div class="container">
     <div class="max-w-4xl mx-auto">
@@ -11,11 +16,12 @@
           <div class="space-y-6">
             <div class="mb-8 md:float-right md:ml-8 md:w-2/5">
               <div class="rounded-lg overflow-hidden shadow-md">
-                <img 
-                  src="/images/seo/about-team.jpg" 
+                <Image 
+                  src={aboutTeamImage}
                   alt="Das Entrümpelung Nord Team aus Kiel bei einer Haushaltsauflösung in Schleswig-Holstein" 
+                  width={800}
+                  height={600}
                   class="w-full h-auto"
-                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
                 />
                 <div class="bg-blue-50 p-8 text-center hidden">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 mx-auto text-blue-500 mb-4">

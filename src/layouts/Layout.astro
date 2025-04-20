@@ -5,18 +5,19 @@ import '../styles/base.css';
 import '../styles/fonts.css';
 import '../styles/global.css';
 import { siteInfo } from '../data/siteInfo.js';
+import ogImageDefault from '../images/seo/og-image.jpg';
 
 interface Props {
 	title: string;
 	description?: string;
-	ogImage?: string;
+	ogImage?: ImageMetadata;
 	canonicalUrl?: string;
 }
 
 const { 
 	title, 
 	description = "Professionelle Entrümpelung & Haushaltsauflösung in Norddeutschland. Schnell, fair und umweltfreundlich. Jetzt kostenloses Angebot anfordern!",
-	ogImage = "/images/og-image.jpg",
+	ogImage = ogImageDefault,
 	canonicalUrl
 } = Astro.props;
 
@@ -47,14 +48,16 @@ const canonical = canonicalUrl
 		<meta property="og:url" content={canonical} />
 		<meta property="og:title" content={`${title} | Entrümpelung Nord`} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content={new URL(ogImage, siteInfo.url)} />
+		<meta property="og:image" content={ogImage.src} />
+		<meta property="og:image:width" content={String(ogImage.width)} />
+		<meta property="og:image:height" content={String(ogImage.height)} />
 		
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content={canonical} />
 		<meta property="twitter:title" content={`${title} | Entrümpelung Nord`} />
 		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content={new URL(ogImage, siteInfo.url)} />
+		<meta property="twitter:image" content={ogImage.src} />
 		
 		<!-- Alternate language versions - currently only German -->
 		<link rel="alternate" hreflang="de" href={canonical} />
@@ -64,7 +67,7 @@ const canonical = canonicalUrl
 	</head>
 	<body class="flex flex-col min-h-screen">
 		<Header />
-		<main class="flex-grow">
+		<main class="flex-grow pt-16">
 			<slot />
 		</main>
 		<Footer />

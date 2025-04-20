@@ -17,7 +17,26 @@
             Kontaktformular
           </h3>
           
-          <form class="space-y-6">
+          <form class="space-y-6" id="contactForm" action="/php/form-handler.php" method="POST">
+            <!-- Honeypot field - hidden from real users -->
+            <div class="hidden">
+              <label for="website">Website</label>
+              <input 
+                type="text" 
+                id="website" 
+                name="website" 
+                tabindex="-1" 
+                autocomplete="off"
+              />
+            </div>
+            
+            <!-- Timestamp field -->
+            <input 
+              type="hidden" 
+              name="timestamp" 
+              id="timestamp"
+            />
+            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
@@ -112,6 +131,19 @@
               ></textarea>
             </div>
             
+            <!-- Math Captcha -->
+            <div class="bg-blue-50 p-4 rounded-lg">
+              <label for="captcha" class="block text-sm font-medium text-gray-700 mb-1">
+                Sicherheitsfrage: <span id="captchaFrage">Lade...</span> *
+              </label>
+              <input 
+                type="number" 
+                name="captcha" 
+                class="w-full md:w-1/3 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+                required
+              />
+            </div>
+            
             <div class="flex items-start">
               <div class="flex items-center h-5">
                 <input 
@@ -141,6 +173,10 @@
             </div>
           </form>
           
+          <div id="formResponse" class="mt-8 p-4 rounded-lg border hidden">
+            <p class="text-sm"></p>
+          </div>
+
           <div class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
             <p class="text-sm text-gray-600">
               <span class="font-semibold text-blue-800">Hinweis:</span> Wir garantieren Ihnen eine schnelle Bearbeitung Ihrer Anfrage und melden uns in der Regel innerhalb von 24 Stunden bei Ihnen zurück.
@@ -150,4 +186,79 @@
       </div>
     </div>
   </div>
-</section> 
+</section>
+
+<script>
+  // Zeitstempel setzen
+  const timestampField = document.getElementById('timestamp') as HTMLInputElement;
+  if (timestampField) {
+    timestampField.value = Math.floor(Date.now() / 1000).toString();
+  }
+
+  // CAPTCHA laden
+  fetch('/php/captcha.php')
+    .then(res => res.text())
+    .then(text => {
+      const captchaElement = document.getElementById('captchaFrage');
+      if (captchaElement) {
+        captchaElement.textContent = text;
+      }
+    })
+    .catch(() => {
+      const captchaElement = document.getElementById('captchaFrage');
+      if (captchaElement) {
+        captchaElement.textContent = 'Fehler beim Laden der Sicherheitsfrage';
+      }
+    });
+
+  // Form submission
+  const form = document.getElementById('contactForm') as HTMLFormElement;
+  const responseDiv = document.getElementById('formResponse');
+
+  if (form && responseDiv) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      submitButton.disabled = true;
+      
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData
+        });
+
+        const result = await response.json();
+        
+        responseDiv.classList.remove('hidden', 'bg-red-50', 'border-red-200', 'bg-green-50', 'border-green-200');
+        
+        if (response.ok) {
+          responseDiv.classList.add('bg-green-50', 'border-green-200');
+          responseDiv.querySelector('p')!.className = 'text-sm text-green-800';
+          responseDiv.querySelector('p')!.textContent = result.message;
+          form.reset();
+          
+          // Reload CAPTCHA after successful submission
+          const captchaResponse = await fetch('/php/captcha.php');
+          const newCaptcha = await captchaResponse.text();
+          const captchaElement = document.getElementById('captchaFrage');
+          if (captchaElement) {
+            captchaElement.textContent = newCaptcha;
+          }
+        } else {
+          responseDiv.classList.add('bg-red-50', 'border-red-200');
+          responseDiv.querySelector('p')!.className = 'text-sm text-red-800';
+          responseDiv.querySelector('p')!.textContent = result.error;
+        }
+      } catch (error) {
+        responseDiv.classList.remove('hidden', 'bg-green-50', 'border-green-200');
+        responseDiv.classList.add('bg-red-50', 'border-red-200');
+        responseDiv.querySelector('p')!.className = 'text-sm text-red-800';
+        responseDiv.querySelector('p')!.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.';
+      } finally {
+        submitButton.disabled = false;
+      }
+    });
+  }
+</script> 

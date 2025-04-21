@@ -1,9 +1,24 @@
 ---
-import { Image } from 'astro:assets';
-import testimonialPerson1 from '../../images/testimonials/person-1.jpg';
-import testimonialPerson2 from '../../images/testimonials/person-2.jpg';
-import testimonialPerson3 from '../../images/testimonials/person-3.jpg';
-// Testimonials component for the homepage
+const testimonials = [
+  {
+    stars: 5,
+    text: "Schnelle und professionelle Entrümpelung! Alles wurde sauber hinterlassen und das Team war super freundlich. Klare Empfehlung!",
+    name: "Anna M.",
+    city: "Kiel"
+  },
+  {
+    stars: 5,
+    text: "Sehr zuverlässig und fairer Preis. Die Entrümpelung lief reibungslos, ich bin absolut zufrieden!",
+    name: "Tobias S.",
+    city: "Hamburg"
+  },
+  {
+    stars: 5,
+    text: "Ich war beeindruckt von der Effizienz und Sorgfalt. Alles wurde wie besprochen erledigt. Vielen Dank!",
+    name: "Katrin W.",
+    city: "Lübeck"
+  }
+];
 ---
 
 <section class="py-20 bg-gradient-to-br from-blue-50 to-gray-50">
@@ -17,173 +32,44 @@ import testimonialPerson3 from '../../images/testimonials/person-3.jpg';
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Testimonial 1 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 flex flex-col h-full">
-          <div class="p-6 flex-grow">
-            <div class="flex items-center mb-4">
-              <div class="text-yellow-400 flex">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
+        {testimonials.map(testimonial => (
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 flex flex-col h-full">
+            <div class="p-6 flex-grow">
+              <div class="flex items-center mb-4">
+                <div class="text-yellow-400 flex">
+                  {Array(testimonial.stars).fill(null).map(() => (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                      <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                    </svg>
+                  ))}
+                </div>
               </div>
+              
+              <blockquote>
+                <p class="text-gray-700 italic">"{testimonial.text}"</p>
+              </blockquote>
             </div>
             
-            <blockquote>
-              <p class="text-gray-700 italic">
-                "Schnelle und professionelle Entrümpelung! Alles wurde sauber hinterlassen und das Team war super freundlich. Klare Empfehlung!"
-              </p>
-            </blockquote>
-          </div>
-          
-          <div class="mt-auto p-6 pt-0">
-            <div class="flex items-center">
-              <div class="w-12 h-12 bg-blue-100 rounded-full overflow-hidden mr-4 flex items-center justify-center">
-                <Image 
-                  src={testimonialPerson1}
-                  alt="Anna M. aus Kiel - Zufriedene Kundin nach Haushaltsauflösung" 
-                  class="w-full h-full object-cover"
-                />
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  viewBox="0 0 24 24" 
-                  fill="currentColor" 
-                  class="w-7 h-7 text-blue-600 hidden"
-                  style="display: none;"
-                >
-                  <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
-                </svg>
-              </div>
-              <div>
-                <p class="font-semibold text-gray-800">Anna M.</p>
-                <p class="text-sm text-gray-500">Kiel</p>
+            <div class="mt-auto p-6 pt-0">
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-100 rounded-full overflow-hidden mr-4 flex items-center justify-center">
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 24 24" 
+                    fill="currentColor" 
+                    class="w-7 h-7 text-blue-600"
+                  >
+                    <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-800">{testimonial.name}</p>
+                  <p class="text-sm text-gray-500">{testimonial.city}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        
-        <!-- Testimonial 2 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 flex flex-col h-full">
-          <div class="p-6 flex-grow">
-            <div class="flex items-center mb-4">
-              <div class="text-yellow-400 flex">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-              </div>
-            </div>
-            
-            <blockquote>
-              <p class="text-gray-700 italic">
-                "Sehr zuverlässig und fairer Preis. Die Entrümpelung lief reibungslos, ich bin absolut zufrieden!"
-              </p>
-            </blockquote>
-          </div>
-          
-          <div class="mt-auto p-6 pt-0">
-            <div class="flex items-center">
-              <div class="w-12 h-12 bg-blue-100 rounded-full overflow-hidden mr-4 flex items-center justify-center">
-                <Image 
-                  src={testimonialPerson2}
-                  alt="Tobias S. aus Hamburg - 5-Sterne Bewertung für Entrümpelung" 
-                  class="w-full h-full object-cover"
-                />
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  viewBox="0 0 24 24" 
-                  fill="currentColor" 
-                  class="w-7 h-7 text-blue-600 hidden"
-                  style="display: none;"
-                >
-                  <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
-                </svg>
-              </div>
-              <div>
-                <p class="font-semibold text-gray-800">Tobias S.</p>
-                <p class="text-sm text-gray-500">Hamburg</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Testimonial 3 -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 flex flex-col h-full">
-          <div class="p-6 flex-grow">
-            <div class="flex items-center mb-4">
-              <div class="text-yellow-400 flex">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
-                </svg>
-              </div>
-            </div>
-            
-            <blockquote>
-              <p class="text-gray-700 italic">
-                "Ich war beeindruckt von der Effizienz und Sorgfalt. Alles wurde wie besprochen erledigt. Vielen Dank!"
-              </p>
-            </blockquote>
-          </div>
-          
-          <div class="mt-auto p-6 pt-0">
-            <div class="flex items-center">
-              <div class="w-12 h-12 bg-blue-100 rounded-full overflow-hidden mr-4 flex items-center justify-center">
-                <Image 
-                  src={testimonialPerson3}
-                  alt="Katrin W. aus Lübeck - Positive Erfahrung mit unserer Entrümpelungsdienstleistung" 
-                  class="w-full h-full object-cover"
-                />
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  viewBox="0 0 24 24" 
-                  fill="currentColor" 
-                  class="w-7 h-7 text-blue-600 hidden"
-                  style="display: none;"
-                >
-                  <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
-                </svg>
-              </div>
-              <div>
-                <p class="font-semibold text-gray-800">Katrin W.</p>
-                <p class="text-sm text-gray-500">Lübeck</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
       
       <!-- Call to Action -->

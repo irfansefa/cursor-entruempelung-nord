@@ -81,35 +81,9 @@ Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeb
 
 Ihren Widerspruch richten Sie bitte an die oben angegebene Kontaktadresse des Verantwortlichen.
 
-## Google Maps
+## Einsatz eines eigenen CAPTCHA-Verfahrens
 
-Wir nutzen auf unserer Webseite Komponenten von “Google Maps”, einem Dienst der Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA (nachfolgend bezeichnet als: “Google”).
-
-Durch Google Maps werden geographische Informationen visuell dargestellt. Hierbei wird durch Google die IP-Adresse des Besuchers erhoben und verarbeitet. Diese wird unabhängig davon, ob die Nutzung von Google Maps tatsächlich erfolgt, oder Sie in Ihrem Google Account eingeloggt sind, an Google übermittelt. Ihre IP-Adresse wird Ihrem Google Account zugeordnet, sofern Sie bei dem Besuch unserer Webseite in diesen eingeloggt sind. Diese Daten werden an externe Server von Google in den USA übertragen. Google ist Teilnehmer des Privacy-Shield Abkommens und zur Datenverarbeitung nach europäischen Standards zertifiziert. Google gibt diese über das technische Verfahren erhobenen Daten unter Umständen an Dritte weiter. **Zweck:** Die Einbindung von Google Maps dient der vereinfachten Visualisierung und Navigation im Rahmen eines Besuchs unseres Standorts. Die Datenverarbeitung von Google erfolgt zum Zwecke der Werbung, Marktforschung, der Gestaltung der Webseite und Bereitstellung von bedarfsgerechter Werbung. **Rechtsgrundlage:** Wir setzen Google Maps auf Grund unseres berechtigten Interesses am an der Optimierung und Gestaltung unseres Onlineangebotes ein, Art. 6 Abs. 1 lit. f DSGVO. **Verhinderung:** Sie können die Zuordnung der Daten verhindern, indem Sie auf die Verwendung von Google Maps auf unserer Webseite verzichten und sich vor Ihrem Besuch aus Ihrem Google Account ausloggen. Zudem können Sie JavaScript in Ihrem Browser deaktivieren, um die Kartenanzeige zu verhindern. Weiter verweisen wir auf die Datenschutzbestimmungen von Google unter folgendem Link [http://www.google.com/intl/de\_de/help/terms\_maps.html](http://www.google.com/intl/de_de/help/terms_maps.html)
-
-**Informationen zum Drittanbieter:**
-
-Sitz innerhalb der EU: Google Dublin, Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4, Ireland, Fax: +353 (1) 436 1001.
-
-*   Nutzerbedingungen: [http://www.google.com/analytics/terms/de.html](http://www.google.com/analytics/terms/de.html)
-*   Übersicht zum Datenschutz: [http://www.google.com/intl/de/analytics/learn/privacy.html](https://www.google.com/intl/de/analytics/learn/privacy.html)
-*   Datenschutzerklärung: [http://www.google.de/intl/de/policies/privacy](https://www.google.de/intl/de/policies/privacy)
-*   Datennutzung durch Google bei Ihrer Nutzung von Websites oder Apps unserer Partner:[https://www.google.com/intl/de/policies/privacy/partners](https://www.google.com/intl/de/policies/privacy/partners)
-*   Datennutzung zu Werbezwecken: [http://www.google.com/policies/technologies/ads](https://www.google.com/policies/technologies/ads)
-*   Personalisierte Werbung durch Google: [http://www.google.de/settings/ads](https://www.google.de/settings/ads)
-*   Google hat sich dem zwischen der Europäischen Union und den USA geschlossenen **Privacy-Shield-Abkommen** unterworfen und sich zertifiziert. Dadurch verpflichtet sich Google, die Standards und Vorschriften des europäischen Datenschutzrechts einzuhalten. Nähere Informationen können Sie dem nachfolgend verlinkten Eintrag entnehmen: [https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active](https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active).
-
-## Google (Invisible) reCAPTCHA
-
-Wir nutzen auf unserem Internetauftritt “Google (Invisible) reCAPTCHA “, einen Dienst der Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.
-
-Der Dienst ermöglicht es uns zu prüfen, ob bestimmte Handlungen oder Eingaben von einem Menschen oder aber missbräuchlich von einem Bot, also von in einem automatisierten Verfahren durch einen Computer vorgenommen wird. Hierzu verarbeitet Google (Invisible) reCAPTCHA Informationen über Ihr Nutzerverhalten auf unserer Webseite. Zudem wird Ihre IP-Adresse an einen Server von Google übertragen. Google (Invisible) reCAPTCHA setzt dabei unter anderem Cookies (siehe zum Begriff oben unter der Überschrift Cookies) ein, die im Zwischenspeicher Ihres Browsers gespeichert werden und die eine Analyse der Benutzung unseres Internetauftritts durch Sie ermöglichen. Nähere Informationen zur Art und Weise der Datenerhebung und -Verarbeitung finden Sie in den Datenschutzhinweisen von Google, die Sie hier abrufen können: [http://www.google.de/intl/de/policies/privacy](http://www.google.de/intl/de/policies/privacy). **Zweck:** In den vorbenannten Interessen liegt der Zweck unserer Nutzung des Dienstes. **Rechtsgrundlage:** Wir setzen Google (Invisible) reCAPTCHA auf Grund unseres berechtigten Interesses an der sicheren und effizieten Bereitstellung sowie der Optimierung unseres Onlineangebotes ein, Art. 6 Abs. 1 lit. f DSGVO. **Verhinderung:** Zum Einsatz und dem Unterbinden von Cookies verweisen wir auf die weiter oben unter Überschrift „Cookies“ gegebenen Hinweise. Sofern Sie beim Aufruf unserer Seite nicht über Ihren Google Account angemeldet sind, wird die über den Dienst an Google übermittelte IP-Adresse nicht mit anderen Daten von Google zusammengeführt. Sie müssen sich also bei Google ausloggen und zwar bevor Sie unsere Seite besuchen, wenn Sie die Zusammenführung Ihrer IP-Adresse mit anderen Daten verhindern wollen. Google hat sich dem zwischen der Europäischen Union und den USA geschlossenen Privacy-Shield-Abkommen unterworfen und sich zertifiziert. Dadurch verpflichtet sich Google, die Standards und Vorschriften des europäischen Datenschutzrechts einzuhalten. Nähere Informationen können Sie dem nachfolgend verlinkten Eintrag entnehmen: [https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active](https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active)
-
-**Informationen zum Drittanbieter:**
-
-Sitz innerhalb der EU: Google Dublin, Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4, Ireland, Fax: +353 (1) 436 1001.
-
-*   Datenschutzerklärung [https://www.google.com/intl/de/policies/](https://www.google.com/intl/de/policies/)
+Um sicherzustellen, dass Eingaben im Kontaktformular durch eine natürliche Person erfolgen und um automatisierte Zugriffe (z. B. durch Bots) zu verhindern, verwenden wir ein eigenes CAPTCHA-Verfahren. Dabei wird eine einfache Rechenaufgabe gestellt, die durch den Nutzer zu lösen ist. Das Verfahren verarbeitet keinerlei personenbezogene Daten und findet vollständig auf unserem Server statt. Eine Weitergabe der Daten an Dritte erfolgt nicht.
 
 ## Unsere Onlinepräsenzen bei sozialen Netzwerken
 

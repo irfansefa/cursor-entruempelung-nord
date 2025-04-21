@@ -14,12 +14,12 @@
 ✅ 2.1 SEO-Optimierung durchführen 
 🔲 2.2 Performance-Optimierung für PageSpeed 
 🔲 2.3 Responsiveness auf Mobilgeräten testen 
-🔲 2.4 Formular-Funktionalität testen 
+✅ 2.4 Formular-Funktionalität testen 
 🔲 2.5 Endgültiger Review und Korrekturen 
 
 ### **3. Deployment**
-🔲 3.1 Dateien für Deployment vorbereiten 
-🔲 3.2 Upload auf IONOS durchführen 
+✅ 3.1 Dateien für Deployment vorbereiten 
+✅ 3.2 Upload auf IONOS durchführen 
 🔲 3.3 Letzte Überprüfung nach Deployment 
 
 ### **Legende:**

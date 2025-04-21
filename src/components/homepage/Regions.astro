@@ -6,24 +6,14 @@ const regions = [
     keywords: ["Hamburg", "Altona", "Eimsbüttel", "Wandsbek", "Hamburg-Nord"]
   },
   {
-    name: "Bremen",
-    description: "Kompetente Entrümpelungsdienstleistungen in Bremen, Bremerhaven und dem gesamten Umland für Privat und Gewerbe.",
-    keywords: ["Bremen", "Bremerhaven"]
+    name: "Kiel",
+    description: "Kompetente Entrümpelungsdienstleistungen in Kiel und dem gesamten Umland für Privat und Gewerbe.",
+    keywords: ["Kiel", "Schwentinental", "Kronshagen", "Altenholt", "Laboe", "Plön"]
   },
   {
     name: "Schleswig-Holstein",
     description: "Umfassende Entrümpelungsservices in Kiel, Lübeck, Flensburg, Neumünster, Norderstedt und ganz Schleswig-Holstein.",
-    keywords: ["Schleswig-Holstein", "Kiel", "Lübeck", "Flensburg", "Neumünster", "Norderstedt"]
-  },
-  {
-    name: "Niedersachsen",
-    description: "Zuverlässige Entrümpelung und Haushaltsauflösung in Hannover, Braunschweig, Osnabrück, Oldenburg und weiteren Städten in Niedersachsen.",
-    keywords: ["Niedersachsen", "Hannover", "Braunschweig", "Osnabrück", "Oldenburg"]
-  },
-  {
-    name: "Mecklenburg-Vorpommern",
-    description: "Professionelle Entrümpelungsdienste in Rostock, Schwerin, Neubrandenburg, Stralsund und dem gesamten Bundesland Mecklenburg-Vorpommern.",
-    keywords: ["Mecklenburg-Vorpommern", "Rostock", "Schwerin", "Neubrandenburg", "Stralsund"]
+    keywords: ["Schleswig-Holstein", "Kiel", "Lübeck", "Flensburg", "Neumünster", "Norderstedt", "Rendsburg"]
   }
 ];
 ---
@@ -37,7 +27,7 @@ const regions = [
       </p>
     </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
       {regions.map(region => (
         <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 border-blue-500">
           <h3 class="text-xl font-semibold mb-2">Entrümpelung {region.name}</h3>

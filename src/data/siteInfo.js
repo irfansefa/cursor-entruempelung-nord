@@ -34,14 +34,23 @@ export const siteInfo = {
   
   // Business details
   business: {
-    foundingYear: "2008", 
+    foundingYear: "2023", 
     numEmployees: "15",
     priceRange: "€€", // € to €€€€
     openingHours: [
       {
         days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "08:00",
-        closes: "18:00"
+        closes: "16:30"
+      },
+      {
+        days: ["Saturday"],
+        opens: "09:00",
+        closes: "14:00"
+      },
+      {
+        days: ["Sunday"],
+        status: "closed"
       }
     ]
   },
@@ -67,12 +76,36 @@ export const siteInfo = {
       name: "Hamburg"
     },
     {
-      type: "State",
-      name: "Niedersachsen"
+      type: "City",
+      name: "Lübeck"
     },
     {
-      type: "State",
-      name: "Mecklenburg-Vorpommern"
+      type: "City",
+      name: "Neumünster"
+    },
+    {
+      type: "City",
+      name: "Flensburg"
+    },
+    {
+      type: "City",
+      name: "Rendsburg"
+    },
+    {
+      type: "City",
+      name: "Eckernförde"
+    },
+    {
+      type: "City",
+      name: "Plön"
+    },
+    {
+      type: "City",
+      name: "Bad Segeberg"
+    },
+    {
+      type: "City",
+      name: "Pinneberg"
     }
   ],
   

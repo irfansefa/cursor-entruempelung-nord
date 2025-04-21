@@ -1,23 +1,23 @@
 # Impressum
 ## Angaben gemäß § 5 TMG
 
-M&M Tankservice Nord GmbH
-Kaiserstraße 7, 24143 Kiel
+**Entrümpelung Nord ist ein Angebot der M&M Tankservice GmbH**<br>
+M&M Tankservice Nord GmbH<br>Kaiserstraße 7<br> 24143 Kiel
 
-**Vertreten durch:**
+**Vertreten durch:**<br>
 Geschäftsführer: Mustafa Akgül
 
-Handelsregister: HRB Nummer 24866 KI
-Registergericht: Amtsgericht Kiel
+Handelsregister: HRB Nummer 24866 KI<br>
+Registergericht: Amtsgericht Kiel<br>
 
-Betriebsnummer: 85443480
-Steuernummer: 20/293/18622
-Ust-IdNr: DE357758817
+Betriebsnummer: 85443480<br>
+Steuernummer: 20/293/18622<br>
+Ust-IdNr: DE357758817<br>
 
-**Kontakt**
-Telefon: 0431 12846305
-E-Mail: info@m-m-nord.de
-Fax: 0431 12846698
+**Kontakt**<br>
+Telefon: 0431 12846305<br>
+E-Mail: info@m-m-nord.de<br>
+Fax: 0431 12846698<br>
 
 ## Verbraucher­streit­beilegung/Universal­schlichtungs­stelle
 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.

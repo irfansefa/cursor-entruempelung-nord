@@ -1,7 +1,21 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 session_start();
 
-$site_owner_email = 'info@moonstar-it.de';
+// Load configuration
+require_once __DIR__ . '/config.php';
+
+// Load PHPMailer classes
+require_once __DIR__ . '/lib/PHPMailer/Exception.php';
+require_once __DIR__ . '/lib/PHPMailer/PHPMailer.php';
+require_once __DIR__ . '/lib/PHPMailer/SMTP.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+$site_owner_email = 'info@entrumpelungnord.de';
 
 // Honeypot check
 if (!empty($_POST['website'])) {
@@ -42,6 +56,7 @@ function createEmailBody($data, $isForSender = false) {
     
     $dateFormatted = $data['date'] ? date('d.m.Y', strtotime($data['date'])) : 'Nicht angegeben';
     
+    // HTML Version
     $html = "
     <html>
     <body style='font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; background: #f9f9f9;'>
@@ -60,7 +75,19 @@ function createEmailBody($data, $isForSender = false) {
         </p>
     </body>
     </html>";
-    return $html;
+
+    // Plain Text Version
+    $text = "$header\n\n";
+    $text .= "Name: {$data['name']}\n";
+    $text .= "E-Mail: {$data['email']}\n";
+    $text .= "Telefon: {$data['phone']}\n";
+    $text .= "Betreff: {$data['subject']}\n";
+    $text .= "Adresse der Entrümpelung: {$data['address']}\n";
+    $text .= "Gewünschter Termin: {$dateFormatted}\n\n";
+    $text .= "Nachricht:\n{$data['message']}\n\n";
+    $text .= "Diese E-Mail wurde automatisch erstellt am " . date('d.m.Y H:i', time());
+
+    return ['html' => $html, 'text' => $text];
 }
 
 $formData = [
@@ -73,20 +100,54 @@ $formData = [
     'message' => $message
 ];
 
-// E-Mail versenden
+// Configure PHPMailer
+function sendEmail($to, $subject, $body, $replyTo = '') {
+    $mail = new PHPMailer(true);
+
+    try {
+        // Server settings
+        $mail->isSMTP();
+        $mail->Host = SMTP_HOST;
+        $mail->SMTPAuth = true;
+        $mail->Username = SMTP_USER;
+        $mail->Password = SMTP_PASS;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = SMTP_PORT;
+        $mail->CharSet = 'UTF-8';
+
+        // Recipients
+        $mail->setFrom(SMTP_USER, 'Entrümpelung-Nord');
+        $mail->addAddress($to);
+        if ($replyTo) {
+            $mail->addReplyTo($replyTo);
+        }
+
+        // Content
+        $mail->isHTML(true);
+        $mail->Subject = $subject;
+        $mail->Body = $body['html'];
+        $mail->AltBody = $body['text'];
+
+        return $mail->send();
+    } catch (Exception $e) {
+        error_log("Mailer Error: " . $mail->ErrorInfo);
+        return false;
+    }
+}
+
+// Send emails
 $subject_owner = "📥 Neue Entrümpelungsanfrage von $name";
 $subject_user = "Ihre Anfrage bei Entrümpelung-Nord";
 
-$headers = "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-$headers .= "From: Entrümpelung-Nord <kontakt@entruempelung-nord.de>\r\n";
-$headers .= "Reply-To: $email\r\n";
+// Create email bodies
+$emailBody = createEmailBody($formData);
+$emailBodyUser = createEmailBody($formData, true);
 
 // An Seitenbetreiber
-$sent_owner = mail($site_owner_email, $subject_owner, createEmailBody($formData), $headers);
+$sent_owner = sendEmail($site_owner_email, $subject_owner, $emailBody, $email);
 
 // An Absender
-$sent_user = mail($email, $subject_user, createEmailBody($formData, true), $headers);
+$sent_user = sendEmail($email, $subject_user, $emailBodyUser);
 
 if ($sent_owner && $sent_user) {
     echo json_encode(['success' => true, 'message' => 'Vielen Dank für Ihre Nachricht. Wir melden uns schnellstmöglich!']);

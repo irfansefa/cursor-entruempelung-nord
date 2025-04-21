@@ -4,6 +4,24 @@ RewriteEngine On
 # Set the base directory
 RewriteBase /
 
+# Protect PHP library files and configuration
+<FilesMatch "\.(php)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Only allow access to form handler and captcha
+<FilesMatch "^(form-handler\.php|captcha\.php)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Protect sensitive directories
+<DirectoryMatch "^.*/(lib|config)/">
+    Order Deny,Allow
+    Deny from all
+</DirectoryMatch>
+
 # Handle directories properly for static site - THIS IS THE KEY FIX
 # If the file exists, serve it directly
 RewriteCond %{REQUEST_FILENAME} -f
@@ -54,4 +72,19 @@ AddDefaultCharset UTF-8
 # Compress text files
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml
+</IfModule>
+
+# Protect against XSS, clickjacking and other security issues
+<IfModule mod_headers.c>
+    # Protect against XSS attacks
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # Prevent MIME-sniffing
+    Header set X-Content-Type-Options "nosniff"
+    
+    # Protect against clickjacking
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # Enable HSTS (Force HTTPS)
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 </IfModule> 

@@ -1,6 +1,18 @@
-<section class="relative bg-gradient-to-br from-blue-700 to-blue-900 text-white">
-  <!-- Background pattern -->
-  <div class="absolute inset-0 opacity-10 bg-[url('/images/pattern.svg')] bg-repeat"></div>
+---
+import { Image } from 'astro:assets';
+import heroImage from '../../images/homepage/homepage-hero.jpg';
+---
+
+<section class="relative text-white">
+  <div class="absolute inset-0">
+    <Image 
+      src={heroImage}
+      alt="Entrümpelung Mitarbeiter beim Verladen von Möbeln" 
+      class="w-full h-full object-cover"
+      quality="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/85 to-blue-800/70"></div>
+  </div>
   
   <div class="container relative py-20 md:py-28">
     <div class="max-w-3xl mx-auto text-center">

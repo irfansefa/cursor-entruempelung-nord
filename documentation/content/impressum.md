@@ -1,7 +1,7 @@
 # Impressum
 ## Angaben gemäß § 5 TMG
 
-**Entrümpelung Nord ist ein Angebot der M&M Tankservice GmbH**<br>
+**Entrümpelung Nord ist ein Angebot der M&M Tankservice Nord GmbH**<br>
 M&M Tankservice Nord GmbH<br>Kaiserstraße 7<br> 24143 Kiel
 
 **Vertreten durch:**<br>

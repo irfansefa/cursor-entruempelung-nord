@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+import logo from '../../images/entrumpelungnord_logo.png';
+
 const navItems = [
-  { name: 'Startseite', href: '/' },
   { name: 'Über uns', href: '/ueber-uns' },
   { name: 'Services', href: '/services' },
   { name: 'Kontakt', href: '/kontakt' },
@@ -14,7 +16,15 @@ const currentPath = Astro.url.pathname;
     <div class="flex justify-between items-center py-4">
       <!-- Logo -->
       <a href="/" class="flex items-center space-x-2">
-        <span class="text-2xl font-bold text-blue-600">Entrümpelung Nord</span>
+        <Image 
+          src={logo}
+          alt="Entrümpelung Nord Logo"
+          width={300}
+          height={50}
+          quality={100}
+          class="h-8 w-auto"
+          format="png"
+        />
       </a>
 
       <!-- Desktop Navigation -->

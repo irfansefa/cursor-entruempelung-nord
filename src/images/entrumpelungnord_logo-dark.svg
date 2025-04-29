@@ -46,7 +46,7 @@
       }
 
       .text-path {
-        fill: #000000;
+        fill: #ffffff;
       }
 
       .text-path-bold {

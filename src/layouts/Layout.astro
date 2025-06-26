@@ -25,6 +25,8 @@ const {
 const canonical = canonicalUrl 
 	? new URL(canonicalUrl, siteInfo.url).toString()
 	: new URL(Astro.url.pathname, siteInfo.url).toString();
+
+declare global { interface Window { klaroConfig: any; } }
 ---
 
 <!doctype html>
@@ -37,6 +39,62 @@ const canonical = canonicalUrl
 		<!-- Google Tag Manager -->
 		<Fragment set:html={`<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TKWW9DSQ');</script>`} />
 		<!-- End Google Tag Manager -->
+		<!-- Klaro! Cookie Consent -->
+		<link rel="stylesheet" href="/klaro-custom.css" />
+		<script>
+		window.klaroConfig = {
+		  version: 1,
+		  elementID: 'klaro',
+		  useShadowDom: false,
+		  noAutoLoad: false,
+		  htmlTexts: true,
+		  storageMethod: 'cookie',
+		  cookieExpiresAfterDays: 30,
+		  privacyPolicy: '/datenschutz/',
+		  default: false,
+		  mustConsent: true,
+		  acceptAll: true,
+		  hideDeclineAll: false,
+		  translations: {
+		    de: {
+		      privacyPolicyUrl: false,
+		      consentModal: {
+		        title: 'Cookie-Einstellungen',
+		        description: 'Wir verwenden Cookies, um Ihnen ein optimales Erlebnis auf unserer Website zu bieten. Sie können selbst entscheiden, welche Kategorien Sie zulassen möchten.'
+		      },
+		      consentNotice: {
+		        description: 'Wir verwenden Cookies, um Ihnen ein optimales Erlebnis auf unserer Website zu bieten. Sie können selbst entscheiden, welche Kategorien Sie zulassen möchten.'
+		      },
+		      purposes: {
+		        analytics: 'Statistik & Tracking',
+		        marketing: 'Marketing'
+		      },
+		      ok: 'Alle akzeptieren',
+		      acceptAll: 'Alle akzeptieren',
+		      acceptSelected: 'Einstellungen speichern',
+		      decline: 'Nur notwendige Cookies',
+		      save: 'Einstellungen speichern',
+		      close: 'Schließen',
+		      learnMore: 'Mehr erfahren',
+		      poweredBy: 'Cookie-Consent mit Klaro!'
+		    }
+		  },
+		  services: [
+		    {
+		      name: 'gtm',
+		      title: 'Google Tag Manager',
+		      purposes: ['analytics', 'marketing'],
+		      cookies: [/^_ga/, /^_gid/, /^_gat/, /^_gcl_au/],
+		      required: false,
+		      default: false,
+		      optOut: false,
+		      onlyOnce: true
+		    }
+		  ]
+		};
+		</script>
+		<script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/latest/klaro.js" data-style="none"></script>
+		<!-- Ende Klaro! Cookie Consent -->
 		
 		<!-- Primary Meta Tags -->
 		<title>{title} | Entrümpelung Nord</title>
@@ -69,6 +127,7 @@ const canonical = canonicalUrl
 		<!-- Local fonts are now used via fonts.css -->
 	</head>
 	<body class="flex flex-col min-h-screen">
+		<div id="klaro"></div>
 		<!-- Google Tag Manager (noscript) -->
 		<Fragment set:html={`<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKWW9DSQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>`} />
 		<!-- End Google Tag Manager (noscript) -->

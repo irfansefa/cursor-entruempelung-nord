@@ -1,0 +1,153 @@
+/* Klaro! Custom Styles für Entrümpelung Nord */
+.klaro .cookie-modal {
+  font-family: 'Inter', system-ui, sans-serif ;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(2, 132, 199, 0.15) ;
+  border: 2px solid #0284c7 ;
+}
+.klaro .cm-modal {
+  background: #ffffff !important;
+}
+.klaro .cm-modal-content {
+  background: #ffffff !important;
+}
+.klaro .cm-header {
+  color: #075985 !important;
+  font-weight: 700 ;
+  font-size: 1rem ;
+}
+.klaro .cm-header h1,
+.klaro .cm-header h2,
+.klaro .cm-header h3 {
+  color: #075985 !important;
+}
+.klaro .cm-body {
+  font-family: 'Inter', system-ui, sans-serif ;
+  color: #1e293b !important;
+  font-size: 0.875rem ;
+  line-height: 1.5 ;
+}
+.klaro .cm-body p {
+  margin: 0.5em 0 ;
+  color: #1e293b !important;
+}
+.klaro .cm-body strong {
+  color: #075985 ;
+  font-weight: 600 ;
+}
+.klaro .cm-body em {
+  color: #0284c7 ;
+  font-style: italic ;
+}
+.klaro .cm-list-title {
+  color: #075985 ;
+  font-weight: 600 ;
+  font-size: 0.875rem ;
+}
+.klaro .cm-list-description {
+  color: #64748b ;
+  font-size: 0.75rem ;
+}
+.klaro .cm-list-input-label {
+  color: #1e293b ;
+  font-weight: 500 ;
+}
+.klaro .cm-btn {
+  font-family: 'Inter', system-ui, sans-serif ;
+  border-radius: 0.5rem ;
+  font-weight: 600 ;
+  padding: 0.75em 1.5em ;
+  font-size: 1rem ;
+  margin: 0.25em 0.5em ;
+  border: none ;
+  cursor: pointer ;
+}
+.klaro .cm-btn-accept {
+  background: #0284c7 ;
+  color: #fff ;
+}
+.klaro .cm-btn-accept:hover {
+  background: #0369a1 ;
+}
+.klaro .cm-btn-decline {
+  background: #e0f2fe ;
+  color: #0284c7 ;
+}
+.klaro .cm-btn-decline:hover {
+  background: #bae6fd ;
+  color: #0369a1 ;
+}
+.klaro .cm-list-input:checked {
+  accent-color: #0284c7 ;
+}
+.klaro .cm-link {
+  color: #0284c7 ;
+  text-decoration: underline ;
+}
+.klaro .cm-link:hover {
+  color: #0369a1 ;
+}
+/* Switch/Toggle Styles */
+.klaro .cm-toggle-all {
+  color: #0284c7 ;
+}
+.klaro .cm-toggle-all:hover {
+  color: #0369a1 ;
+}
+.klaro .cm-toggle-all.cm-active {
+  background: #0284c7 ;
+  color: #fff ;
+}
+.klaro .cm-toggle-all.cm-active:hover {
+  background: #0369a1 ;
+}
+.klaro .cookie-modal .cm-list-input:checked+.cm-list-label .slider {
+  background: #0284c7 !important;
+}
+/* Override FAFAFA colors */
+.klaro .cookie-modal p,
+.klaro .cookie-modal strong,
+.klaro .cookie-modal ul,
+.klaro .cookie-modal li,
+.klaro .context-notice p,
+.klaro .context-notice strong,
+.klaro .context-notice ul,
+.klaro .context-notice li,
+.klaro .cookie-notice p,
+.klaro .cookie-notice strong,
+.klaro .cookie-notice ul,
+.klaro .cookie-notice li {
+  color: #1e293b !important;
+  font-weight: 400 ;
+}
+.klaro .cookie-modal h1,
+.klaro .cookie-modal h2,
+.klaro .context-notice h1,
+.klaro .context-notice h2,
+.klaro .cookie-notice h1,
+.klaro .cookie-notice h2 {
+  color: #075985 !important;
+}
+.klaro .cookie-modal strong,
+.klaro .context-notice strong,
+.klaro .cookie-notice strong {
+  color: #075985 !important;
+}
+/* Normal Text Styles */
+.klaro .cm-body {
+  font-family: 'Inter', system-ui, sans-serif ;
+  color: #1e293b ;
+  font-size: 0.875rem ;
+  line-height: 1.5 ;
+}
+.klaro .cm-body p {
+  margin: 0.5em 0 ;
+}
+.klaro .cm-body strong {
+  color: #075985 ;
+  font-weight: 600 ;
+}
+.klaro .cm-body em {
+  color: #0284c7 ;
+  font-style: italic ;
+} 

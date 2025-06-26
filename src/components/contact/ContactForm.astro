@@ -189,6 +189,8 @@
 </section>
 
 <script>
+  declare global { interface Window { dataLayer: any[]; } }
+
   // Zeitstempel setzen
   const timestampField = document.getElementById('timestamp') as HTMLInputElement;
   if (timestampField) {
@@ -237,6 +239,9 @@
           responseDiv.classList.add('bg-green-50', 'border-green-200');
           responseDiv.querySelector('p')!.className = 'text-sm text-green-800';
           responseDiv.querySelector('p')!.textContent = result.message;
+          // Google Tag Manager Conversion Event
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'form_success' });
           form.reset();
           
           // Reload CAPTCHA after successful submission

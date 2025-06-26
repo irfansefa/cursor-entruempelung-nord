@@ -15,7 +15,7 @@ Steuernummer: 20/293/18622<br>
 Ust-IdNr: DE357758817<br>
 
 **Kontakt**<br>
-Telefon: 0431 12846305<br>
+Telefon: 0431 12846304<br>
 E-Mail: info@m-m-nord.de<br>
 Fax: 0431 12846698<br>
 

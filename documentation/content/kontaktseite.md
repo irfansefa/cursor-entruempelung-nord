@@ -10,7 +10,7 @@ Sie benötigen eine professionelle **Entrümpelung, Haushaltsauflösung oder Woh
 Kaiserstraße 7 
 24143 Kiel
 
-☎ **Telefon:** +49 431 128 46 305  
+☎ **Telefon:** +49 431 128 46 304
 📧 **E-Mail:** info@entrumpelungnord.de  
 
 **Geschäftszeiten:**  

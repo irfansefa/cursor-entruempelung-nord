@@ -83,13 +83,49 @@ Ihren Widerspruch richten Sie bitte an die oben angegebene Kontaktadresse des Ve
 
 ## Einsatz eines eigenen CAPTCHA-Verfahrens
 
-Um sicherzustellen, dass Eingaben im Kontaktformular durch eine natürliche Person erfolgen und um automatisierte Zugriffe (z. B. durch Bots) zu verhindern, verwenden wir ein eigenes CAPTCHA-Verfahren. Dabei wird eine einfache Rechenaufgabe gestellt, die durch den Nutzer zu lösen ist. Das Verfahren verarbeitet keinerlei personenbezogene Daten und findet vollständig auf unserem Server statt. Eine Weitergabe der Daten an Dritte erfolgt nicht.
+Um sicherzustellen, dass Eingaben im Kontaktformular durch eine natürliche Person erfolgen und um automatisierte Zugriffe (z. B. durch Bots) zu verhindern, verwenden wir ein eigenes CAPTCHA-Verfahren. Dabei wird eine einfache Rechenaufgabe gestellt, die durch den Nutzer zu lösen ist. Das Verfahren verarbeitet keinerlei personenbezogene Daten und findet vollständig auf unserem Server statt. Eine Weitergabe der Daten an Dritte erfolgt nicht.
+
+## Einsatz von Google Tag Manager und Google Ads
+
+### Google Tag Manager
+
+Wir verwenden auf unserer Website den Google Tag Manager der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Der Google Tag Manager ist ein Tool, mit dem wir verschiedene Tracking-Tools und andere Services auf unserer Website verwalten können. Der Google Tag Manager selbst erstellt keine Nutzerprofile, speichert keine Cookies und führt keine Analysen durch. Er dient lediglich der Verwaltung und Ausführung der über ihn eingebundenen Tools.
+
+**Rechtsgrundlage:** Die Verarbeitung erfolgt auf Grundlage unseres berechtigten Interesses an einer effizienten und sicheren Bereitstellung unseres Internetangebotes, Art. 6 Abs. 1 lit. f DSGVO.
+
+### Google Ads
+
+Wir nutzen Google Ads der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, um auf externen Websites auf unsere Website aufmerksam zu machen. Durch die Nutzung von Google Ads können wir messen, wie erfolgreich unsere Werbekampagnen sind. Die durch Google Ads verwendeten Cookies ermöglichen es uns zu verfolgen, ob Sie nach dem Klick auf eine unserer Anzeigen auf unserer Website eine gewünschte Aktion (Conversion) durchgeführt haben.
+
+**Verarbeitete Daten:** IP-Adresse, Nutzungsdaten, Online-Identifikatoren, Geräte-Identifikatoren, Informationen über die Interaktion mit einer Anzeige.
+
+**Zweck:** Messung der Effektivität unserer Werbekampagnen, Conversion-Tracking, Remarketing.
+
+**Rechtsgrundlage:** Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung, Art. 6 Abs. 1 lit. a DSGVO.
+
+**Speicherdauer:** Die Daten werden nach 30 Tagen gelöscht, sofern keine gesetzliche Aufbewahrungspflicht besteht.
+
+**Widerspruch:** Sie können der Verarbeitung Ihrer Daten durch Google Ads jederzeit widersprechen, indem Sie Ihre Cookie-Einstellungen ändern oder die Einwilligung widerrufen.
+
+### Cookie-Consent-Tool Klaro!
+
+Wir verwenden das Cookie-Consent-Tool Klaro! der KIProtect GmbH, Bismarckstraße 10-12, 10625 Berlin, um Ihre Einwilligung zur Verarbeitung personenbezogener Daten durch Cookies und andere Tracking-Technologien einzuholen und zu verwalten.
+
+**Verarbeitete Daten:** Ihre Cookie-Einstellungen, Einwilligungen, technische Daten (IP-Adresse, Browser-Informationen).
+
+**Zweck:** Verwaltung und Dokumentation Ihrer Cookie-Einwilligungen, DSGVO-konforme Einwilligungserklärung.
+
+**Rechtsgrundlage:** Die Verarbeitung erfolgt auf Grundlage unseres berechtigten Interesses an der Einhaltung der gesetzlichen Vorgaben zur Einwilligungserklärung, Art. 6 Abs. 1 lit. f DSGVO.
+
+**Speicherdauer:** Ihre Einwilligungen werden für 30 Tage gespeichert.
+
+**Widerspruch:** Sie können Ihre Cookie-Einstellungen jederzeit über den Link "Cookie-Einstellungen" in unserem Footer ändern.
 
 ## Unsere Onlinepräsenzen bei sozialen Netzwerken
 
 Wir betreiben Onlinepräsenzen innerhalb der nachfolgend aufgelisteten sozialen Netzwerke. Besuche Sie eine dieser Präsenzen, werden durch den jeweiligen Anbieter Ihre Nutzungsdaten erhoben und verarbeitet. Dies erfolgt im Regelfall durch Cookies, die auf dem von Ihnen genutzten Endgerät gespeichert werden. Zum Begriff des Cookies siehe oben unter der entsprechenden Überschrift. Mit den Cookies werden Ihr Nutzungsverhalten und Ihre Interessen gespeichert und entsprechende Nutzungsprofile angelegt. In den Nutzungsprofilen können zudem Daten unabhängig des von Ihnen verwendeten Gerätes gespeichert werden. Dies ist insbesondere dann der Fall, wenn Sie Mitglied der jeweiligen Plattform und bei dieser eingeloggt sind.
 
-Wir haben auf unserer Webseite Plugins in Form von. „Social-Media-Buttons“ der von uns genutzten Anbieter eingebettet. Welches Plugin zu welchem Anbieter gehört, können Sie an dem jeweiligen Logo erkennen, mit welchem das Plugin gekennzeichnet ist. Wir haben die Social Media Plugins auf unserem Internetauftritt standardmäßig deaktiviert, sodass beim Aufruf unserer Seiten nicht automatisch Daten an den Anbieter des Plugins übertragen werden. Hierzu verwenden wir die sogenannte 2-Klick-Lösung. Wenn Sie ein Plugin nutzen möchten, haben Sie die Möglichkeit dieses durch einen Klick auf die entsprechende Schaltfläche zu aktivieren. Erst hierdurch wird das Plugin nachgeladen und die Erfassung von Informationen und deren Übertragung an den Anbieter ausgelöst. In diesem Fall können auch dann, wenn Sie bei dem jeweiligen sozialen Netzwerk kein Konto besitzen oder dann, wenn Sie dort ein Konto besitzen aber dort nicht eingeloggt sind, Daten durch das aktive Social Media Plugin an den dazugehörigen Anbieter gesendet werden.
+Wir haben auf unserer Webseite Plugins in Form von. "Social-Media-Buttons" der von uns genutzten Anbieter eingebettet. Welches Plugin zu welchem Anbieter gehört, können Sie an dem jeweiligen Logo erkennen, mit welchem das Plugin gekennzeichnet ist. Wir haben die Social Media Plugins auf unserem Internetauftritt standardmäßig deaktiviert, sodass beim Aufruf unserer Seiten nicht automatisch Daten an den Anbieter des Plugins übertragen werden. Hierzu verwenden wir die sogenannte 2-Klick-Lösung. Wenn Sie ein Plugin nutzen möchten, haben Sie die Möglichkeit dieses durch einen Klick auf die entsprechende Schaltfläche zu aktivieren. Erst hierdurch wird das Plugin nachgeladen und die Erfassung von Informationen und deren Übertragung an den Anbieter ausgelöst. In diesem Fall können auch dann, wenn Sie bei dem jeweiligen sozialen Netzwerk kein Konto besitzen oder dann, wenn Sie dort ein Konto besitzen aber dort nicht eingeloggt sind, Daten durch das aktive Social Media Plugin an den dazugehörigen Anbieter gesendet werden.
 
 Die erhobenen Daten werden von dem Anbieter in der Regel zum Zwecke der Werbung und Marktforschung verwendet, indem aus Ihrem Nutzungsverhalten Nutzungsprofile erstellt werden. Diese wiederum können von den Anbietern dazu verwendet werden, um Ihnen interessenbezogene Werbung auszuspielen. Gegen die Erstellung von Nutzerprofilen steht Ihnen ein Widerrufsrecht zu. Um dieses auszuüben, müssen Sie sich an den jeweiligen Anbieter wenden. Wenn Sie einen Account beim Anbieter besitzen, können Ihre Nutzungsdaten damit verknüpft werden. Um eine solche Verknüpfung Ihrer Daten zu verhindern, können Sie sich vor dem Besuch unserer Seite bei dem Dienst des Anbieters ausloggen.
 
